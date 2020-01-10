@@ -16,7 +16,7 @@ function MyButton() {
 }
 describe('Button component', () => {
   test('it changes text when clicked', () => {
-    let component;
+    let component: any;
     act(() => {
       component = create(<MyButton />);
     });
