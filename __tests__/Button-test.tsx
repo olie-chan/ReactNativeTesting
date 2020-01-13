@@ -1,19 +1,7 @@
-import React, {useState} from 'react';
-import {create, act} from 'react-test-renderer';
-import {Button, View} from 'react-native';
+import React from 'react';
+import { create, act } from 'react-test-renderer';
+import { MyButton } from '../Components';
 
-function MyButton() {
-  const [someText, updateSomeText] = useState('');
-  return (
-    <View>
-      {someText}
-      <Button
-        title="Nothing to do for now"
-        onPress={() => updateSomeText('CLICKED')}
-      />
-    </View>
-  );
-}
 describe('Button component', () => {
   test('it changes text when clicked', () => {
     let component: any;
